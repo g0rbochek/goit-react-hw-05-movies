@@ -1,5 +1,5 @@
 {
-  "name": "goit-hw-movies",
+  "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://g0rbochek.github.io/goit-react-hw-05-movies/",
@@ -10,8 +10,8 @@
     "axios": "^1.6.2",
     "formik": "^2.4.5",
     "lazy": "^1.0.11",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.4.5",
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",

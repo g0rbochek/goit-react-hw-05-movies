@@ -1,18 +1,18 @@
-import { Hourglass } from 'react-loader-spinner';
+import { InfinitySpin } from 'react-loader-spinner';
 import { LoadMessage, LoaderWrap } from './Loader.styled';
 
 export const Loader = () => {
   return (
     <LoaderWrap>
       <LoadMessage>Loading...</LoadMessage>
-      <Hourglass
+      <InfinitySpin
         visible={true}
         height="50"
-        width="50"
-        ariaLabel="hourglass-loading"
+        width="400"
+        ariaLabel="infinity-spin-loading"
         wrapperStyle={{}}
         wrapperClass=""
-        colors={['#306cce', '#72a1ed']}
+        color="#353538"
       />
     </LoaderWrap>
   );

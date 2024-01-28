@@ -4,16 +4,14 @@ import getFilmQuery from '../../apiJs/query';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import FilmItem from 'components/FilmItem/FilmItem';
-import { Loader } from 'components/Loader/loader';
-import ErrMessage from 'components/ErrMessage/ErrMessage';
+import { Loader } from 'components/Loader/Loader';
+import ErrMessage from 'components/ErrMassage/ErrMassage';
 
 const SearchFilm = () => {
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
   const [films, setFilms] = useState();
   const [params, setParams] = useSearchParams();
-
-  // const location = useLocation();
 
   const initialValue = {
     film: '',
@@ -48,11 +46,7 @@ const SearchFilm = () => {
     <div>
       {loader && <Loader />}
       {error && <ErrMessage />}
-      <Formik
-        initialValues={initialValue}
-        onSubmit={handleSubmit}
-        // validationSchema={userSchema}
-      >
+      <Formik initialValues={initialValue} onSubmit={handleSubmit}>
         <Form autoComplete="off">
           <SearchButton type="submit">Search</SearchButton>
           <Input type="text" name="film" placeholder="Enter film..." />

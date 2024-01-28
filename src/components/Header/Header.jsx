@@ -5,7 +5,7 @@ import { Container } from 'components/Container/Container.styled';
 
 const Header = () => {
   const styleNav = ({ isActive }) => ({
-    color: isActive ? 'tomato' : 'white',
+    color: isActive ? 'black' : 'white',
     textDecoration: 'none',
   });
 
