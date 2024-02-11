@@ -13,14 +13,17 @@ const FilmItem = ({ films }) => {
   };
 
   const location = useLocation();
-  // console.log(location);
-
+  // console.log(location.pathname);
   return (
     <ListNameMovies>
       {films.map(({ id, title, poster_path }) => {
         return (
           <li key={id}>
-            <Link style={styleLink} to={`/movies/${id}`} state={location}>
+            <Link
+              style={styleLink}
+              to={`/movies/${id}`}
+              state={{ from: location.pathname }}
+            >
               <div>
                 <img
                   src={

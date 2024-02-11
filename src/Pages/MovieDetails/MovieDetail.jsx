@@ -27,11 +27,7 @@ const MoveDetails = () => {
   const { poster_path, title, vote_average, overview, genres = [] } = film;
 
   const location = useLocation();
-  const backLinkLocationRef = useRef(location.state ?? '/');
-
-  // не можу зрозуміти чому в такому варіанті який пропонується не хоче працювати!!!
-
-  //   const backLinkLocationRef = useRef(location.state?.from ?? '/');
+  const backLinkLocationRef = useRef(location.state?.from ?? '/');
 
   // показує underfind і викидає на головну сторінку
 

@@ -12,7 +12,7 @@ const SearchFilm = () => {
   const [error, setError] = useState(false);
   const [films, setFilms] = useState();
   const [params, setParams] = useSearchParams();
-
+  // console.log(useSearchParams());
   const initialValue = {
     film: '',
   };
