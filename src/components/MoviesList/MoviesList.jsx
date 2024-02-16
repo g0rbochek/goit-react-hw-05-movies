@@ -6,7 +6,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import defaultPhoto from '../../img/noAvailable.jpg';
 
-const FilmItem = ({ films }) => {
+const MoviesList = ({ films }) => {
   const styleLink = {
     textDecoration: 'none',
     color: 'black',
@@ -22,7 +22,7 @@ const FilmItem = ({ films }) => {
             <Link
               style={styleLink}
               to={`/movies/${id}`}
-              state={{ from: location.pathname }}
+              state={{ from: location }}
             >
               <div>
                 <img
@@ -45,4 +45,4 @@ const FilmItem = ({ films }) => {
   );
 };
 
-export default FilmItem;
+export default MoviesList;
