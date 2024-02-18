@@ -13,7 +13,6 @@ const MoviesList = ({ films }) => {
   };
 
   const location = useLocation();
-  // console.log(location.pathname);
   return (
     <ListNameMovies>
       {films.map(({ id, title, poster_path }) => {

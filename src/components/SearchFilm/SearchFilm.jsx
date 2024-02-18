@@ -1,9 +1,6 @@
-// import { Formik, Form } from 'formik';
-// import { Input, SearchButton } from './SearchFilm.styled';
 import getFilmQuery from '../../apiJs/query';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// import FilmItem from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import ErrMessage from 'components/ErrMassage/ErrMassage';
 import MoviesList from 'components/MoviesList/MoviesList';
