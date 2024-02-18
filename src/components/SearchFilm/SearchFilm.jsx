@@ -1,18 +1,20 @@
-import { Formik, Form } from 'formik';
-import { Input, SearchButton } from './SearchFilm.styled';
+// import { Formik, Form } from 'formik';
+// import { Input, SearchButton } from './SearchFilm.styled';
 import getFilmQuery from '../../apiJs/query';
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import FilmItem from 'components/MoviesList/MoviesList';
+// import FilmItem from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import ErrMessage from 'components/ErrMassage/ErrMassage';
+import MoviesList from 'components/MoviesList/MoviesList';
+import SearchForm from '../SearchForm/SearchForm';
 
 const SearchFilm = () => {
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
   const [films, setFilms] = useState();
   const [params, setParams] = useSearchParams();
-  // console.log(useSearchParams());
+
   const initialValue = {
     film: '',
   };
@@ -46,14 +48,8 @@ const SearchFilm = () => {
     <div>
       {loader && <Loader />}
       {error && <ErrMessage />}
-      <Formik initialValues={initialValue} onSubmit={handleSubmit}>
-        <Form autoComplete="off">
-          <SearchButton type="submit">Search</SearchButton>
-          <Input type="text" name="film" placeholder="Enter film..." />
-          {/* <ErrorMessage name="film" component="div" /> */}
-        </Form>
-      </Formik>
-      {films && <FilmItem films={films} />}
+      <SearchForm initialValues={initialValue} onSubmit={handleSubmit} />
+      {films && <MoviesList films={films} />}
     </div>
   );
 };

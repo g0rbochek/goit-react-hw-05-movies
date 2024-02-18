@@ -1,8 +1,8 @@
 import React from 'react';
-import FilmItem from 'components/MoviesList/MoviesList';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 const ListMovies = ({ trendMovies }) => {
-  return <FilmItem films={trendMovies} />;
+  return <MoviesList films={trendMovies} />;
 };
 
 export default ListMovies;

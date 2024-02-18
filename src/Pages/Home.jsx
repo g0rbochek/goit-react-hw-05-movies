@@ -1,5 +1,5 @@
 import { Container } from 'components/Container/Container.styled';
-import ListMovies from 'components/ListMovies/ListMovies';
+import MoviesList from 'components/ListMovies/ListMovies';
 import { Loader } from 'components/Loader/Loader';
 import { Section } from 'components/Section/Section.styled';
 import getFetch from '../apiJs/trend';
@@ -36,7 +36,7 @@ const Home = () => {
             Trending this week
           </h1>
           {loader && <Loader />}
-          {movies.length > 0 && <ListMovies trendMovies={movies} />}
+          {movies.length > 0 && <MoviesList trendMovies={movies} />}
         </Container>
       </Section>
       {error && <div>Error, Please reload this page!</div>}
