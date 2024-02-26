@@ -1,7 +1,7 @@
 import {
   ListNameMovies,
   TitleFilm,
-} from 'components/ListMovies/ListMovies.styled';
+} from 'components/MoviesList/MoviesList.styled';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import defaultPhoto from '../../img/noAvailable.jpg';

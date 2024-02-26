@@ -1,12 +1,12 @@
 import { Container } from 'components/Container/Container.styled';
-import MoviesList from 'components/ListMovies/ListMovies';
+import MoviesList from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { Section } from 'components/Section/Section.styled';
 import getFetch from '../apiJs/trend';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
-  const [movies, setMovies] = useState([]);
+  const [films, setFilms] = useState([]);
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
 
@@ -18,7 +18,7 @@ const Home = () => {
         const {
           data: { results },
         } = await getFetch();
-        setMovies(results);
+        setFilms(results);
       } catch (error) {
         setError(true);
       } finally {
@@ -36,7 +36,7 @@ const Home = () => {
             Trending this week
           </h1>
           {loader && <Loader />}
-          {movies.length > 0 && <MoviesList trendMovies={movies} />}
+          {films.length > 0 && <MoviesList films={films} />}
         </Container>
       </Section>
       {error && <div>Error, Please reload this page!</div>}
